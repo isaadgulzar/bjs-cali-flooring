@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALI Flooring</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.min.css">
+    <script src="./assets/js/alpine.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Slick Slider CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/stylesheet.css">
+    <style>
+     [x-cloak] { display: none; }
+    </style>
+</head>
+<body>
+    <!-- Header  -->
+    <header x-data="{showNav : false}" class="max-w-screen-2xl relative mx-auto bg-red shadow">
+        <div class="w-full lg:divide-y lg:divide-gray-200">
+            <div class="relative px-2 sm:px-4 lg:px-8 flex justify-between items-center py-2 lg:py-4">
+                <div class="relative z-10 px-2 flex">
+                    <div class="flex items-center">
+                        <img class="block h-16 lg:h-32 w-auto" src="./assets/images/logoBJS.jpg" alt="Workflow">
+                    </div>
+                </div>
+                <div class="hidden lg:flex flex-col items-end gap-y-4">
+                    <p class="text-white text-2xl">
+                        Call Us <a class="font-semibold" href="tel:300 000 00 00">877-BJS-4747</a> <span class="px-2">|</span> <a class="font-semibold" href="mailto:xxx@gmail.com">Email Us</a>
+                    </p>
+                    <button class="flex text-red bg-white font-bold px-6 py-2 rounded-md">
+                        <svg class="h-5 w-5 text-red mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                        </svg>
+                        <span>
+                            Sign in
+                        </span>
+                    </button>
+                </div>
+                <div class="relative z-10 flex items-center lg:hidden">
+                <!-- Mobile menu button -->
+                <button type="button" class="rounded-md p-2 inline-flex items-center justify-center text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <svg x-show="showNav == false" @click="showNav = !showNav" class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg x-show="showNav == true" @click="showNav = !showNav" class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                </div>
+            </div>
+            <nav class="hidden lg:flex px-2 sm:px-4 lg:px-8 lg:justify-end flex-col lg:flex-row lg:space-x-8 bg-lightGray my-0.5" aria-label="Global">
+                <a href="#" class="text-gray-800 hover:bg-red-500 hover:text-white py-2 px-3 lg:py-4 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+                    Products   
+                </a>
+        
+                <a href="#" class="text-gray-800 hover:bg-red-500 hover:text-white py-2 px-3 lg:py-4 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+                    How It Works
+                </a>
+        
+                <a href="#" class="text-gray-800 hover:bg-red-500 hover:text-white py-2 px-3 lg:py-4 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+                    Free Estimate
+                </a>
+        
+                <a href="#" class="text-gray-800 hover:bg-red-500 hover:text-white py-2 px-3 lg:py-4 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+                    Back to BJ's.com
+                </a>
+            </nav>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <nav x-show="showNav" class="absolute top-20 z-20 h-36 w-full flex lg:hidden px-2 sm:px-4 lg:px-8 lg:py-2 lg:justify-end flex-col lg:flex-row lg:space-x-8 bg-lightGray" aria-label="Global">
+          <a href="#" class="text-gray-800 py-2 px-3 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+              Products   
+          </a>
+          <a href="#" class="text-gray-800 py-2 px-3 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+              How It Works
+          </a>
+          <a href="#" class="text-gray-800 py-2 px-3 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+              Free Estimate
+          </a>
+          <a href="#" class="text-gray-800 py-2 px-3 inline-flex justify-center lg:justify-start items-center text-sm lg:text-xl font-semibold">
+              Back to BJ's.com
+          </a>
+        </nav>
+    </header>
+    <!-- Slider  -->
+    <div id="slider1" class="max-w-screen-2xl overflow-hidden relative lg:mb-20 lg:mx-10 flex items-center justify-end 2xl:mx-auto">
+        <div class="flex w-full">
+          <div class="home-slider container max-h-96 h-64 md:h-auto">
+            <div class="mx-auto">
+                    <img class="w-full" src="./assets/images/bg2.jpg" alt="">
+            </div>
+            <div class="mx-auto">
+                    <img class="w-full" src="./assets/images/bg1.jpg" alt="">
+            </div>
+            <div  class="mx-auto">
+                <a href="#">
+                    <img class="w-full" src="./assets/images/bg2.jpg" alt=""> 
+                </a>
+            </div>
+            <div class="mx-auto">
+                  <img class="w-full" src="./assets/images/bg1.jpg" alt=""> 
+            </div>
+          </div>
+          <div class="slider-dots-container absolute h-10 z-20 -bottom-0.5 lg:bottom-0 w-full bg-black md:bg-gray-500">
+            <!-- For Slider Dots  -->
+          </div>
+        </div>
+        <!-- Text Section -->
+        <div class="absolute top-0 left-0 w-2/4 bg-red border-none opacity-70 h-full overflow-hidden py-5 lg:py-12 px-5 lg:px-20">
+            <h1 class="text-xl md:text-3xl lg:text-6xl text-white font-bold mb-3">
+                <span>
+                  FLOORING
+                </span>
+            </h1>
+            <p class="-mt-2 text-white text-lg md:text-xl">
+                PROFESSIONALLY INSTALLED
+            </p>
+            <p class="mt-2 text-white text-base md:text-xl">
+                For as little as
+            </p>
+            <h1 class="text-xl md:text-5xl text-white font-medium mb-5 md:mb-3">
+                <span>
+                    $XX/Month*
+                </span>
+            </h1>
+            <button class="bg-white text-red hover:text-black focus:outline-none text-sm md:text-4xl font-bold uppercase px-3 lg:px-8 py-2 rounded-md">
+              FREE ESTIMATE
+            </button>
+        </div>
+    </div>
+    <!-- Special Offers  -->
+    <div class="max-w-screen-2xl bg-lightGray py-10 relative px-5 lg:mx-10 2xl:mx-auto">
+      <h1 class="text-3xl text-center md:text-5xl font-black text-black opacity-80">
+        <span>
+          Special Offers
+        </span>
+      </h1>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8 md:gap-y-5 mt-14">
+          <div x-data="{overlay: false}" class="flex flex-col space-y-4 relative">
+              <div @mouseover="overlay = true" @mouseout="overlay = false" class="relative flex flex-col justify-center">
+                  <img class="mx-auto w-full h-40 md:h-80" src="./assets/images/offer4.jpg" alt="">
+                  <div class="absolute starTriangle left-0 bottom-0 opacity-50"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="absolute text-white bottom-1 left-1 md:bottom-2 md:left-2 h-10 md:h-14 w-10 md:w-14" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <div x-show="overlay" class="absolute w-full h-full flex justify-center items-center bg-black opacity-70">
+                    <a href="#" class="text-xl md:text-4xl font-black text-white">Learn More</a>
+                  </div>
+              </div>
+              <div class="text-center">
+                <p class="text-xl lg:text-3xl font-bold text-center text-black">Collection/Color</p>
+                <p class="text-lg lg:text-2xl text-center text-black">Starting at:</p>
+                <p class="text-xl lg:text-3xl font-bold text-center text-red">$XX/Sq. Ft.</p>
+              </div>
+          </div>
+          <div x-data="{overlay: false}" class="flex flex-col space-y-4 relative">
+            <div @mouseover="overlay = true" @mouseout="overlay = false" class="relative flex flex-col justify-center">
+                <img class="mx-auto w-full h-40 md:h-80" src="./assets/images/offer3.jpg" alt="">
+                <div class="absolute starTriangle left-0 bottom-0 opacity-50"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute text-white bottom-1 left-1 md:bottom-2 md:left-2 h-10 md:h-14 w-10 md:w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <div x-show="overlay" class="absolute w-full h-full flex justify-center items-center bg-black opacity-70">
+                  <a href="#" class="text-xl md:text-4xl font-black text-white">Learn More</a>
+                </div>
+            </div>
+            <div class="text-center">
+              <p class="text-xl lg:text-3xl font-bold text-center text-black">Collection/Color</p>
+              <p class="text-lg lg:text-2xl text-center text-black">Starting at:</p>
+              <p class="text-xl lg:text-3xl font-bold text-center text-red">$XX/Sq. Ft.</p>
+            </div>
+          </div>
+          <div x-data="{overlay: false}" class="flex flex-col space-y-4 relative">
+            <div @mouseover="overlay = true" @mouseout="overlay = false" class="relative flex flex-col justify-center">
+                <img class="mx-auto w-full h-40 md:h-80" src="./assets/images/offer2.jpg" alt="">
+                <div class="absolute starTriangle left-0 bottom-0 opacity-50"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute text-white bottom-1 left-1 md:bottom-2 md:left-2 h-10 md:h-14 w-10 md:w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <div x-show="overlay" class="absolute w-full h-full flex justify-center items-center bg-black opacity-70">
+                  <a href="#" class="text-xl md:text-4xl font-black text-white">Learn More</a>
+                </div>
+            </div>
+            <div class="text-center">
+              <p class="text-xl lg:text-3xl font-bold text-center text-black">Collection/Color</p>
+              <p class="text-lg lg:text-2xl text-center text-black">Starting at:</p>
+              <p class="text-xl lg:text-3xl font-bold text-center text-red">$XX/Sq. Ft.</p>
+            </div>
+          </div>
+          <div x-data="{overlay: false}" class="flex flex-col space-y-4 relative">
+            <div @mouseover="overlay = true" @mouseout="overlay = false" class="relative flex flex-col justify-center">
+                <img class="mx-auto w-full h-40 md:h-80" src="./assets/images/offer1.jpg" alt="">
+                <div class="absolute starTriangle left-0 bottom-0 opacity-50"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute text-white bottom-1 left-1 md:bottom-2 md:left-2 h-10 md:h-14 w-10 md:w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <div x-show="overlay" class="absolute w-full h-full flex justify-center items-center bg-black opacity-70">
+                  <a href="#" class="text-xl md:text-4xl font-black text-white">Learn More</a>
+                </div>
+            </div>
+            <div class="text-center">
+              <p class="text-xl lg:text-3xl font-bold text-center text-black">Collection/Color</p>
+              <p class="text-lg lg:text-2xl text-center text-black">Starting at:</p>
+              <p class="text-xl lg:text-3xl font-bold text-center text-red">$XX/Sq. Ft.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Contactless Quote  -->
+    <div class="max-w-screen-2xl overflow-hidden relative lg:mx-10 lg:pt-5 lg:pb-10 2xl:mx-auto">
+      <div class="relative mt-5 lg:mt-14 justify-center items-center">
+        <div class="mx-auto max-h-96">
+          <img class="w-full h-80 md:h-96 lg:h-auto" src="./assets/images/bg2.jpg" alt="">
+        </div>
+        <!-- Text Section -->
+        <div class="absolute top-6 md:top-4 lg:top-8 flex items-center left-5 lg:left-1/4 w-11/12 lg:w-1/2 bg-black border-none opacity-80 overflow-hidden py-8 px-5 lg:px-10">
+            <div class="flex flex-col space-y-4 text-left mx-auto">
+              <h1 class="text-xl md:text-2xl lg:text-5xl text-white font-bold mb-3">
+                Get a Contactless Quote
+              </h1>
+              <ul class="list-disc list-inside">
+                <li class="text-base md:text-4xl text-white font-bold">Provide basic Dimensions</li>
+                <li class="text-base md:text-4xl text-white font-bold">Answer a Few Questions</li>
+                <li class="text-base md:text-4xl text-white font-bold">Get an Instant Quote for your project.</li>
+              </ul>
+              <div class="text-center">
+                <button class="mt-4 bg-red text-white hover:bg-red-700 rounded-xl focus:outline-none text-base md:text-4xl font-medium uppercase px-10 lg:px-8 py-3 rounded-md md:border-4 border-white">
+                  CONTACTLESS QUOTE
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features & Benefits  -->
+    <div class="max-w-screen-2xl relative mx-5 lg:mx-10 py-16 2xl:mx-auto">
+      <h1 class="text-3xl text-center md:text-5xl font-black text-black opacity-80">
+        <span>
+          Features & Benefits
+        </span>
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-5 gap-y-8 md:gap-y-5 mt-14">
+        <div class="flex flex-col space-y-3">
+          <div class="relative h-40 w-40 mx-auto">
+            <svg data-prefix="fas" data-icon="circle" class="h-40 w-40 text-black opacity-50 mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-white absolute top-4 left-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="text-center">
+            <p class="text-lg md:text-xl lg:text-3xl font-extrabold text-center text-red">Premium Products</p>
+            <p class="text-base md:text-lg lg:text-xl font-medium text-center text-black w-72 mx-auto">
+              Hardwood, Luxury Vinyl, GeoWood, Bamboo & Cork.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <div class="relative h-40 w-40 mx-auto">
+            <svg data-prefix="fas" data-icon="circle" class="h-40 w-40 text-black opacity-50 mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-white absolute top-3 left-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+            </svg>
+          </div>
+          <div class="text-center">
+            <p class="text-lg md:text-xl lg:text-3xl font-extrabold text-center text-red">Most Popular Styles & Colors</p>
+            <p class="text-base md:text-lg lg:text-xl font-medium text-center text-black w-72 mx-auto">
+              Over 500 Styles & Colors.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <div class="relative h-40 w-40 mx-auto">
+            <svg data-prefix="fas" data-icon="circle" class="h-40 w-40 text-black opacity-50 mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+            </svg>
+            <svg data-prefix="fas" data-icon="gavel" class="h-28 w-32 text-white absolute top-5 left-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M504.971 199.362l-22.627-22.627c-9.373-9.373-24.569-9.373-33.941 0l-5.657 5.657L329.608 69.255l5.657-5.657c9.373-9.373 9.373-24.569 0-33.941L312.638 7.029c-9.373-9.373-24.569-9.373-33.941 0L154.246 131.48c-9.373 9.373-9.373 24.569 0 33.941l22.627 22.627c9.373 9.373 24.569 9.373 33.941 0l5.657-5.657 39.598 39.598-81.04 81.04-5.657-5.657c-12.497-12.497-32.758-12.497-45.255 0L9.373 412.118c-12.497 12.497-12.497 32.758 0 45.255l45.255 45.255c12.497 12.497 32.758 12.497 45.255 0l114.745-114.745c12.497-12.497 12.497-32.758 0-45.255l-5.657-5.657 81.04-81.04 39.598 39.598-5.657 5.657c-9.373 9.373-9.373 24.569 0 33.941l22.627 22.627c9.373 9.373 24.569 9.373 33.941 0l124.451-124.451c9.372-9.372 9.372-24.568 0-33.941z"></path>
+            </svg>
+          </div>
+          <div class="text-center">
+            <p class="text-lg md:text-xl lg:text-3xl font-extrabold text-center text-red">Professional Installation</p>
+            <p class="text-base md:text-lg lg:text-xl font-medium text-center text-black w-72 mx-auto">
+              Certified, experienced Installers Licensed, Insured, Background Checked
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <div class="relative h-40 w-40 mx-auto">
+            <svg data-prefix="fas" data-icon="certificate" class="h-40 w-40 text-black opacity-50 mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z"></path>
+            </svg>
+            <div class="h-32 w-32 text-white flex flex-col items-center absolute top-8 left-4">
+              <h2 class="text-7xl font-black text-white">50</h2>
+              <p class="text-3xl font-black text-white -mt-3">YEAR</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="text-lg md:text-xl lg:text-3xl font-extrabold text-center text-red">Industry Leading Warranties</p>
+            <p class="text-base md:text-lg lg:text-xl font-medium text-center text-black w-72 mx-auto">
+              50 Year Product Warranty 1 Year Installation Warranty
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col md:col-span-2 lg:col-span-1 space-y-3">
+          <div class="relative h-40 w-40 mx-auto">
+            <svg data-prefix="fas" data-icon="circle" class="h-40 w-40 text-black opacity-50 mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-white absolute top-5 left-4" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+          <div class="text-center">
+            <p class="text-lg md:text-xl lg:text-3xl font-extrabold text-center text-red">100% Member Satisfaction</p>
+            <p class="text-base md:text-lg lg:text-xl font-medium text-center text-black w-72 mx-auto">
+              BJ's stands behind every project.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-1 md:col-span-2 lg:col-span-5 text-center mt-5">
+          <button class="bg-red text-white hover:bg-red-700 focus:outline-none text-xl md:text-4xl font-medium uppercase px-5 lg:px-8 py-3 rounded-xl">
+            LEARN MORE
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Inspiration  -->
+    <div class="max-w-screen-2xl overflow-hidden relative 2xl:mx-auto bg-lightGray pt-12">
+      <div class="mx-5 lg:mx-10">
+        <h1 class="text-3xl text-center md:text-5xl font-black text-black opacity-80">
+          <span>
+            Looking for Inspiration?
+          </span>
+        </h1>
+        <div class="relative mt-14 justify-center items-center">
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-0 mt-14">
+            <div class="relative border-2 border-white overflow-hidden flex flex-col space-y-4">
+                <div class="object-cover w-full shadow-lg mx-auto">
+                    <img class="mx-auto w-full" src="./assets/images/Flooring-BJs.png" alt="">
+                </div>
+                <div class="absolute h-10 md:h-12 z-20 bottom-0 bg-black md:bg-transparent opacity-50 w-full md:opacity-100">
+                  <p class="text-lg md:text-2xl font-medium text-white md:text-black px-2 mt-1 md:mt-0 md:px-6">Aged Hickory</p>
+                </div>
+            </div>
+            <div class="relative border-2 border-white overflow-hidden flex flex-col space-y-4">
+              <div class="object-cover w-full shadow-lg mx-auto">
+                  <img class="mx-auto w-full" src="./assets/images/BathRemodel-BJs.png" alt="">
+              </div>
+              <div class="absolute h-10 md:h-12 z-20 bottom-0 bg-black md:bg-transparent opacity-50 w-full md:opacity-100">
+                <p class="text-lg md:text-2xl font-medium text-white md:text-black px-2 mt-1 md:mt-0 md:px-6">Seaboard Oak</p>
+              </div>
+            </div>
+            <div class="relative border-2 border-white overflow-hidden flex flex-col space-y-4">
+            <div class="object-cover w-full shadow-lg mx-auto">
+                <img class="mx-auto w-full" src="./assets/images/WaterFiltration-BJs.png" alt="">
+            </div>
+            <div class="absolute h-10 md:h-12 z-20 bottom-0 bg-black md:bg-transparent opacity-50 w-full md:opacity-100">
+              <p class="text-lg md:text-2xl font-medium text-white md:text-black px-2 mt-1 md:mt-0 md:px-6">Knotty Barrel Oak</p>
+            </div>
+            </div>
+            <div class="relative border-2 border-white overflow-hidden flex flex-col space-y-4">
+              <div class="object-cover w-full shadow-lg mx-auto">
+                  <img class="mx-auto w-full" src="./assets/images/Flooring-BJs.png" alt="">
+              </div>
+              <div class="absolute h-10 md:h-12 z-20 bottom-0 bg-black md:bg-transparent opacity-50 w-full md:opacity-100">
+                <p class="text-lg md:text-2xl font-medium text-white md:text-black px-2 mt-1 md:mt-0 md:px-6">Catalina Oak</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center my-10">
+            <button class="bg-red text-white hover:bg-red-700 focus:outline-none text-xl md:text-4xl font-medium uppercase px-5 lg:px-8 py-3 rounded-md">
+              VIEW COMPLETE GALLERY
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Apply For FINANCING  -->
+    <div class="max-w-screen-2xl overflow-hidden relative lg:mx-10 lg:pt-5 lg:pb-10 2xl:mx-auto">
+      <div class="relative mt-5 lg:mt-14 justify-center items-center">
+        <div class="mx-auto max-h-96">
+          <img class="w-full h-80 lg:h-auto" src="./assets/images/bg2.jpg" alt="">
+        </div>
+        <!-- Text Section -->
+        <div class="absolute top-12 lg:top-16 text-center left-8 md:left-16 lg:left-1/4 w-10/12 lg:w-1/2 bg-white border-none opacity-90 overflow-hidden py-8 px-5 lg:px-10">
+            <h1 class="text-xl md:text-2xl lg:text-5xl text-black font-extrabold mb-3.5 max-w-lg mx-auto">
+                <span>
+                  Buy Now & Don't Pay
+                  Until Next Year!
+                </span>
+            </h1>
+            <p class=" text-black text-sm md:text-3xl font-bold mb-5">
+              12 Months No Payments, No Interest*
+            </p>
+            <button class="bg-red text-white hover:bg-red-700 focus:outline-none text-lg md:text-4xl font-medium uppercase px-5 lg:px-8 py-3 rounded-md">
+              APPLY FOR FINANCING
+            </button>
+        </div>
+      </div>
+    </div>
+    <!-- REFERENTIES  -->
+    <div class="max-w-screen-2xl relative mx-12 lg:mx-20 2xl:mx-auto pt-5 md:pt-0 pb-5 md:pb-24">
+        <h1 class="text-3xl text-center md:text-5xl font-black text-black opacity-80 my-5 md:my-16">
+          <span>
+            Customer Ratings
+          </span>
+        </h1>
+        <div class="max-w-7xl mx-auto">
+          <div class="autoplay">
+            <div class="border text-center px-6 py-3">
+              <div class="flex flex-col gap-y-2">
+                <img class="h-14 w-14 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="">
+                <a href="#" class="text-lg font-bold font-medium">John Smith</a>
+                <ul class="flex flex-row justify-center">
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                </ul>
+                <p class="text-xs">
+                  Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the industry’s
+                  standard dummy text ever since the
+                  1500s, when an unknown printer took
+                  a galley of type. 
+                </p>
+                <p class="flex justify-center my-1">
+                  <span>
+                    <svg class="h-5 w-5" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                      <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/>
+                    </svg>
+                  </span>
+                  <span class="text-xs text-gray-400 ml-2">
+                    1 week ago
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="border text-center px-6 py-3">
+              <div class="flex flex-col gap-y-2">
+                <img class="h-14 w-14 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="">
+                <a href="#" class="text-lg font-bold font-medium">John Smith</a>
+                <ul class="flex flex-row justify-center">
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                </ul>
+                <p class="text-xs">
+                  Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the industry’s
+                  standard dummy text ever since the
+                  1500s, when an unknown printer took
+                  a galley of type. 
+                </p>
+                <p class="flex justify-center my-1">
+                  <span>
+                    <svg class="h-5 w-5" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                      <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/>
+                    </svg>
+                  </span>
+                  <span class="text-xs text-gray-400 ml-2">
+                    1 week ago
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="border text-center px-6 py-3">
+              <div class="flex flex-col gap-y-2">
+                <img class="h-14 w-14 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="">
+                <a href="#" class="text-lg font-bold font-medium">John Smith</a>
+                <ul class="flex flex-row justify-center">
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                </ul>
+                <p class="text-xs">
+                  Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the industry’s
+                  standard dummy text ever since the
+                  1500s, when an unknown printer took
+                  a galley of type. 
+                </p>
+                <p class="flex justify-center my-1">
+                  <span>
+                    <svg class="h-5 w-5" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                      <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/>
+                    </svg>
+                  </span>
+                  <span class="text-xs text-gray-400 ml-2">
+                    1 week ago
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="border text-center px-6 py-3">
+              <div class="flex flex-col gap-y-2">
+                <img class="h-14 w-14 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="">
+                <a href="#" class="text-lg font-bold font-medium">John Smith</a>
+                <ul class="flex flex-row justify-center">
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                </ul>
+                <p class="text-xs">
+                  Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the industry’s
+                  standard dummy text ever since the
+                  1500s, when an unknown printer took
+                  a galley of type. 
+                </p>
+                <p class="flex justify-center my-1">
+                  <span>
+                    <svg class="h-5 w-5" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                      <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/>
+                    </svg>
+                  </span>
+                  <span class="text-xs text-gray-400 ml-2">
+                    1 week ago
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="border text-center px-6 py-3">
+              <div class="flex flex-col gap-y-2">
+                <img class="h-14 w-14 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="">
+                <a href="#" class="text-lg font-bold font-medium">John Smith</a>
+                <ul class="flex flex-row justify-center">
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                  <li>
+                      <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                  </li>
+                </ul>
+                <p class="text-xs">
+                  Lorem Ipsum is simply dummy text of
+                  the printing and typesetting industry.
+                  Lorem Ipsum has been the industry’s
+                  standard dummy text ever since the
+                  1500s, when an unknown printer took
+                  a galley of type. 
+                </p>
+                <p class="flex justify-center my-1">
+                  <span>
+                    <svg class="h-5 w-5" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                      <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/>
+                    </svg>
+                  </span>
+                  <span class="text-xs text-gray-400 ml-2">
+                    1 week ago
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Testimonials -->
+    <div class="max-w-screen-2xl relative 2xl:mx-auto bg-lightGray pt-12 md:pb-20">
+      <div class="lg:mx-10">
+        <h1 class="text-3xl text-center md:text-5xl font-black text-black opacity-80 mx-5 lg:mx-0 mb-16">
+          <span>
+            Here’s what our customers are saying
+          </span>
+        </h1>
+        <div id="videoBg" class="bg-red lg:pb-0 lg:z-10 lg:relative">
+          <div class="flex flex-col lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-8">
+            <div class="relative lg:col-span-1 -mt-16 lg:-mt-10 mx-5 lg:mx-0">
+              <!-- <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div> -->
+              <div class="mx-auto max-w-md px-4 sm:max-w-5xl sm:px-6 lg:p-0 lg:h-full">
+                <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none h-52 lg:h-full">
+                  <iframe src="https://saadgulzar.tech/zahravi/assets/videos/Placeholder.mp4" frameborder="0" allowfullscreen="" class="absolute top-5 border md:border-2 border-white left-0 w-full h-full">
+                  </iframe>                
+                </div>
+              </div>
+            </div>
+            <div class="bg-red -mt-3 lg:m-0 lg:col-span-1 lg:pl-8">
+              <div class="testimonial-slider container max-h-96 h-auto">
+                <div class="mx-auto max-w-md px-4 sm:max-w-2xl md:max-w-5xl lg:max-w-none sm:px-6 lg:px-0 pt-5 pb-14 lg:pt-20 lg:pb-20 text-center">
+                  <blockquote>
+                    <div>
+                      <p class="mt-10 lg:mt-6 text-xl lg:text-2xl text-white">
+                        “... courteous and willing to answer questions. Did
+                        not leave any messes or leave anything behind for us
+                        to dispose of! Workers were very much all business,
+                        always working at a good pace and very professional.
+                        Excellent from start to finish.”
+                      </p>
+                    </div>
+                    <footer class="mt-2 lg:mt-6">
+                      <p class="text-2xl font-bold text-white italic">-S. Ginsberg, Brooklyn NY</p>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 pt-5 pb-14 lg:pt-20 lg:pb-20 lg:max-w-none text-center">
+                  <blockquote>
+                    <div>
+                      <p class="mt-10 lg:mt-6 text-xl lg:text-2xl text-white">
+                        “... courteous and willing to answer questions. Did
+                        not leave any messes or leave anything behind for us
+                        to dispose of! Workers were very much all business,
+                        always working at a good pace and very professional.
+                        Excellent from start to finish.”
+                      </p>
+                    </div>
+                    <footer class="mt-2 lg:mt-6">
+                      <p class="text-2xl font-bold text-white italic">-S. Ginsberg, Brooklyn NY</p>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 pt-5 pb-14 lg:pt-20 lg:pb-20 lg:max-w-none text-center">
+                  <blockquote>
+                    <div>
+                      <p class="mt-10 lg:mt-6 text-xl lg:text-2xl text-white">
+                        “... courteous and willing to answer questions. Did
+                        not leave any messes or leave anything behind for us
+                        to dispose of! Workers were very much all business,
+                        always working at a good pace and very professional.
+                        Excellent from start to finish.”
+                      </p>
+                    </div>
+                    <footer class="mt-2 lg:mt-6">
+                      <p class="text-2xl font-bold text-white italic">-S. Ginsberg, Brooklyn NY</p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Learn More About CALI Flooring  -->
+    <div id="aboutCali" class="max-w-screen-2xl relative mb-9 lg:mb-20 lg:mx-10 flex flex-col space-y-12 items-center justify-end my-20 2xl:mx-auto">
+      <h1 class="text-3xl text-center md:text-5xl font-black text-black opacity-80">
+        <span>
+          Learn More About Cali Flooring
+        </span>
+      </h1>
+      <div class="flex flex-wrap max-w-xs md:max-w-2xl lg:max-w-3xl mx-auto">
+        <div class="single-item container">
+          <div class="mx-auto focus:outline-none">
+              <video class="w-full focus:outline-none"autoplay controls  src="https://saadgulzar.tech/zahravi/assets/videos/Placeholder.mp4"></video>
+          </div>
+          <div class="mx-auto focus:outline-none">
+            <video class="w-full focus:outline-none"autoplay controls src="https://saadgulzar.tech/zahravi/assets/videos/Placeholder.mp4"></video>
+          </div>
+          <div class="mx-auto focus:outline-none">
+            <video class="w-full focus:outline-none" sautoplay controls src="https://saadgulzar.tech/zahravi/assets/videos/Placeholder.mp4"></video>
+          </div>
+          <div class="mx-auto focus:outline-none">
+              <video class="w-full focus:outline-none"autoplay controls  src="https://saadgulzar.tech/zahravi/assets/videos/Placeholder.mp4"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="max-w-screen-2xl mx-auto bg-lightGray mt-20 hidden lg:block" aria-labelledby="footerHeading">
+        <h2 id="footerHeading" class="sr-only">Footer</h2>
+        <div class="mx-auto py-12 mx-4 sm:mx-6 lg:py-16 lg:mx-8 border-b-2 border-darkGray">
+          <p class="text-3xl text-black opacity-60">
+            Call Us <a class="font-bold" href="tel:0300 000 000 00">877-BJS-4747</a>  | <span class="font-bold">Contact Us</span> Online
+          </p>
+        </div>
+        <div class="mx-auto py-12 lg:py-16 lg:px-8">
+          <div class="xl:gap-8">
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+              <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 class="block text-3xl font-semibold text-black opacity-60">
+                    Our Company
+                  </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Join Our Network
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Privacy Policy & Licensing
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        California Privacy Policy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-12 md:mt-0">
+                  <h3 class="text-3xl font-semibold text-black opacity-60">
+                    How It Works
+                  </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Certified Contractors
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Member Pledge
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Prepare for Your Project
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 class="text-3xl font-semibold text-black opacity-60">
+                    Products
+                  </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        All Products
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Bath & Shower Systems
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Blinds, Shades & Shutters
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Cabinet Refacing
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Exterior Doors
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Flooring
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Generators
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Gutters
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Heating & Air
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Insulation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Roofing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Siding
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Solar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Water Filtration
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Windows
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-12 md:mt-0">
+                  <h3 class="text-3xl font-semibold text-black opacity-60">
+                    Products
+                  </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Free Estimate
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Adobe Reader
+                      </a>
+                    </li>
+      
+                    <li>
+                      <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Accessibility Statement
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                          BJ’s.com
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            Site Map
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            BJ’s Gift Card Terms & Conditions
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                            COVID-19
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <!-- Footer Mobile-->
+    <footer class="max-w-screen-2xl mx-auto bg-lightGray mt-20 block lg:hidden" aria-labelledby="footerHeading">
+      <h2 id="footerHeading" class="sr-only">Footer</h2>
+      <div class="mx-auto py-7 lg:py-16 lg:mx-8 border-b border-darkGray">
+        <p class="text-3xl text-center text-black opacity-60">
+          Call Us <a class="font-black" href="tel:0300 000 000 00">877-BJS-4747</a> <br> <span class="font-black">Contact Us</span> Online
+        </p>
+      </div>
+      <div class="mx-auto lg:py-16 lg:px-8">
+        <div class="flex flex-col">
+          <div>
+            <div x-data="{ showDrop : false}" class="border-b py-3 px-5 border-black bg-white">
+              <h3 @click="showDrop = !showDrop" class="flex justify-between items-center lg:block text-3xl font-semibold text-black opacity-60">
+                Our Company
+                <span x-show="showDrop == false" class="lg:hidden text-red"> + </span>
+                <span x-show="showDrop == true" class="lg:hidden text-red transform rotate-45"> + </span>
+              </h3>
+              <ul x-show="showDrop" class="space-y-4">
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Join Our Network
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Privacy Policy & Licensing
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    California Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div  x-data="{ showDrop : false}" class="border-b py-3 px-5 border-black bg-white">
+              <h3 @click="showDrop = !showDrop" class="flex justify-between items-center lg:block text-3xl font-semibold text-black opacity-60">
+                How It Works
+                <span x-show="showDrop == false" class="lg:hidden text-red"> + </span>
+                <span x-show="showDrop == true" class="lg:hidden text-red transform rotate-45"> + </span>
+              </h3>
+              <ul x-show="showDrop" class="space-y-4">
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Certified Contractors
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Member Pledge
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Prepare for Your Project
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div x-data="{ showDrop : false}" class="border-b py-3 px-5 border-black bg-white">
+              <h3 @click="showDrop = !showDrop" class="flex justify-between items-center lg:block text-3xl font-semibold text-black opacity-60">
+                Products
+                <span x-show="showDrop == false" class="lg:hidden text-red"> + </span>
+                <span x-show="showDrop == true" class="lg:hidden text-red transform rotate-45"> + </span>
+              </h3>
+              <ul x-show="showDrop" class="space-y-4">
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    All Products
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Bath & Shower Systems
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Blinds, Shades & Shutters
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Cabinet Refacing
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Exterior Doors
+                  </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Flooring
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Generators
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Gutters
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Heating & Air
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Insulation
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Roofing
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Siding
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Solar
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Water Filtration
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Windows
+                    </a>
+                </li>
+              </ul>
+            </div>
+            <div  x-data="{ showDrop : false}" class="border-b py-3 px-5 border-black bg-white">
+              <h3 @click="showDrop = !showDrop" class="flex justify-between items-center lg:block text-3xl font-semibold text-black opacity-60">
+                Helpful Links
+                <span x-show="showDrop == false" class="lg:hidden text-red"> + </span>
+                <span x-show="showDrop == true" class="lg:hidden text-red transform rotate-45"> + </span>
+              </h3>
+              <ul x-show="showDrop" class="space-y-4">
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Free Estimate
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Adobe Reader
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                    Accessibility Statement
+                  </a>
+                </li>
+                <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                      BJ’s.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        Site Map
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        BJ’s Gift Card Terms & Conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-lg text-gray-500 hover:text-gray-900">
+                        COVID-19
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Copyrights -->
+    <div class="max-w-screen-2xl md:mx-5 lg:mx-auto bg-white">
+      <p class="text-center md:text-left text-sm md:text-lg text-gray-500 pt-5 pb-8">
+        &copy; 2014 - 2024 Powered by Installation Made Easy, Inc. 
+      </p>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"></script>
+    <script>
+    function toggleDropDown(event) {
+        let aElement = event.target;
+        if (event.target.nodeName == "svg") {
+            aElement = event.target.parentNode;
+        }
+        if (event.target.nodeName == "path") {
+            aElement = event.target.parentNode.parentNode;
+        }
+        $(aElement).siblings(".dropdown_menu.dropdown_menu--animated").toggleClass("block");
+    }
+    $('.autoplay').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // centerPadding: '20px',
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1150,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+            }
+            },
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            }
+            },
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+            }
+            }
+        ]
+    });
+    $(document).ready(function(){
+        $('.home-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+        $('.testimonial-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+        $('.single-item').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            speed: 700,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+      });
+    </script>
+</body>
+</html>
